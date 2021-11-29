@@ -28,7 +28,7 @@ Branches 단위에서 master로 merge 될 때, conflict가 발생됐음을 가�
 ## 충돌 (Conflict)
 main(=master) branch에서 fork 된 두 개의 새로운 branch에서 `tbsp cilantro`의 값을 바꾸고 `git merge 브랜치명`을 실행하게 되면 두 번째 브랜치 병합에서 **충돌**이 발생한다.
 
-### **Conflict(충돌)**은 왜 발생하는가?
+### Conflict(충돌)은 왜 발생하는가?
 만약, 충돌이 없다고 가정해보자.
 
 ```js
