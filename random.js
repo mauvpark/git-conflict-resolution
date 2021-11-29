@@ -1,4 +1,4 @@
-const IMPORTANT = 10;
+const IMPORTANT = 8;
 
 function calculate() {
 	// 0-IMPORTANT 사이의 난수 생성
