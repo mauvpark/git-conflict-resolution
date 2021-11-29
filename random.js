@@ -1,5 +1,5 @@
-const IMPORTANT = 4;
 const Hello = "World!";
+const IMPORTANT = 6;
 
 function calculate() {
 	// 0-IMPORTANT 사이의 난수 생성
