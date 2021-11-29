@@ -26,7 +26,7 @@ Branches 단위에서 master로 merge 될 때, conflict가 발생됐음을 가�
 ```
 
 ## 충돌 (Conflict)
-main(=master) branch에서 fork 된 두 개의 새로운 branch에서 `tbsp cilantro`의 값을 바꾸고 `git merge 브랜치명`을 실행하게 되면 두 번째 브랜치 병합에서 **충돌**이 발생한다.
+main(=master) branch에서 새로 만들어진 두 개의 새로운 branch에서 `tbsp cilantro`의 값을 바꾸고 `git merge 브랜치명`을 실행하게 되면 두 번째 브랜치 병합에서 **충돌**이 발생한다.
 
 ### Conflict(충돌)은 왜 발생하는가?
 만약, 충돌이 없다고 가정해보자.
@@ -59,6 +59,25 @@ Conflict 기능은 존재하지 않으며 '망한게임즈'라는 회사에서�
 ```
 
 위의 중복되는 2개의 값에서 적합한 것을 고르고 `git add 충돌된파일명(확장자포함)`을 실행한 후에 `git status`에서 문제없음을 확인한다. 최종적으로 `git commit`을 실행한다.
+
+## main branch가 아닌 새로운 브랜치 간 병합
+main branch에서는 최초 병합에서 성공적으로 병합이 됐던 것과 달리 새로 만들어진 브랜치 간 병합에서는 최초 병합임에도 서로 Conflict가 발생한다.
+
+```js
+<<<<<<< HEAD
+const IMPORTANT = 4;
+const Hello = "World!";
+=======
+const IMPORTANT = 6;
+>>>>>>> random-6
+
+function calculate() {
+	// 0-IMPORTANT 사이의 난수 생성
+	return Math.random() * (IMPORTANT - 0) + 0;
+}
+
+calculate();
+```
 
 ## 관련 명령어
 - `git checkout 브랜치명`: 해당 브랜치로 이동
